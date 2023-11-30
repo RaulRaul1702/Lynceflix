@@ -6,9 +6,10 @@ import javafx.scene.control.Label;
 public class HelloController {
     @FXML
     private Label welcomeText;
+    private int userID;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void setUserID(int userID) {
+        this.userID = userID;
+
     }
 }

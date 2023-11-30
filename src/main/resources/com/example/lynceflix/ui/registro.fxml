@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lynceflix.ui.RegistroController">
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="registro-background">
+            <children>
+                <VBox alignment="CENTER" layoutX="167.0" layoutY="87.0" spacing="10">
+                    <GridPane hgap="10" vgap="10">
+                        <Label styleClass="registro-label" text="Registro de Usuario" />
+
+                        <Label styleClass="registro-label" text="Nombre:" GridPane.rowIndex="1" />
+                        <TextField fx:id="nombreField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label styleClass="registro-label" text="Correo Electrónico:" GridPane.rowIndex="2" />
+                        <TextField fx:id="correoField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label styleClass="registro-label" text="Nombre de Usuario:" GridPane.rowIndex="3" />
+                        <TextField fx:id="usuarioField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label styleClass="registro-label" text="Contraseña:" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="contrasenaField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label styleClass="registro-label" text="Tipo de Suscripción:" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="tipoSuscripcionComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Basic" />
+                                    <String fx:value="Premium" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label styleClass="registro-label" text="Tipo de Método de Pago:" GridPane.rowIndex="6" />
+                        <ComboBox fx:id="tipoMetodoPagoComboBox" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Tarjeta de Débito" />
+                                    <String fx:value="Tarjeta de Crédito" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label styleClass="registro-label" text="Número de Tarjeta:" GridPane.rowIndex="7" />
+                        <TextField fx:id="numeroTarjetaField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                        <Label styleClass="registro-label" text="Fecha de Vencimiento:" GridPane.rowIndex="8" />
+                        <TextField fx:id="fechaVencimientoField" styleClass="registro-textfield" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                        <Button fx:id="registrarButton" onAction="#handleRegistrarButton" styleClass="registro-button" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
